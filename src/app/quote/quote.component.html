@@ -1,45 +1,45 @@
 <section id="quotes">
-  <ng-progress></ng-progress>
+    <ng-progress></ng-progress>
 
-  <div class="container">
+    <div class="container">
 
-      <div class="row">
-          <blockquote class="text-center text-lg">
-              <p>{{yu.quote}}</p>
-              <footer><cite>{{yu.author}}</cite></footer>
-          </blockquote>
-      </div>
+        <div class="row">
+            <blockquote class="text-center text-lg">
+                <p>{{yu.quote}}</p>
+                <footer><cite>{{yu.author}}</cite></footer>
+            </blockquote>
+        </div>
 
-  </div>
+    </div>
 
 
-  <h1>ZEN QUOTES</h1>
+    <h1>ZEN QUOTES</h1>
 </section>
 <div class="container">
-  <div class="row">
-      <div class="col jumbotron">
+    <div class="row">
+        <div class="col jumbotron">
 
-          <div *ngFor='let quote of quotes;let i = index'>
-              <p appStrikethrough class="me">Added by : {{quote.name}} on {{quote.completeDate|date|uppercase}}</p>
-              <button (click)='toggleDetails(i)' class="btn btn-outline-primary">Read Quote</button>
+            <div *ngFor='let quote of quotes;let i = index'>
+                <p appStrikethrough class="me">Added by : {{quote.name}} on {{quote.completeDate|date|uppercase}}</p>
+                <button (click)='toggleDetails(i)' class="btn btn-outline-primary">Read Quote</button>
 
-              <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-
-
-          </div>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
 
 
-
-      </div>
+            </div>
 
 
 
+        </div>
 
 
-      <div class="col">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
 
-      </div>
 
-  </div>
+        <div class="col">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+
+
+        </div>
+
+    </div>
