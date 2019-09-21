@@ -17,4 +17,6 @@ body {
   font-family: 'Kaushan Script', cursive;
 }
 
-
+.jumbotron{
+   background: none;
+}
