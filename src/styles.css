@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 20px;
+  background-color: blue;
   /* background-image: url(src/assets/bg5.jpg) */
 }
 
@@ -20,3 +21,28 @@ body {
 .jumbotron{
    background: none;
 }
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+#content {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 80%;
+  max-width: 978px;
+}
+
