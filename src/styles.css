@@ -4,9 +4,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 20px;
-  background-color: rgb(133, 133, 235);
-  /* background-image: url(src/assets/bg5.jpg) */
+  height: 500px;
+  background-image: url(assets/zen.jpg);
+  background-position-y: 1%;
+  opacity: 0.8;
 }
+
 
 #quotes {
   padding: 20px;
@@ -18,26 +21,12 @@ body {
   font-family: 'Kaushan Script', cursive;
 }
 
-.jumbotron{
-   background: none;
+.double {
+  border-style: double;
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
 
-#loader-wrapper .loader-section {
-  position: fixed;
-  top: 0;
-  width: 51%;
-  height: 100%;
-  background: #222222;
-  z-index: 1000;
-}
-
-#loader-wrapper .loader-section.section-left {
-  left: 0;
-}
-
-#loader-wrapper .loader-section.section-right {
-  right: 0;
-}
 
 #content {
   margin: 0 auto;
