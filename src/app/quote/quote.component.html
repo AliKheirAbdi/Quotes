@@ -1,7 +1,5 @@
 <section id="quotes">
-    <ng-progress></ng-progress>
-
-    <!-- <div class="container">
+    <div class="container">
 
         <div class="row">
             <blockquote class="text-center text-lg">
@@ -9,10 +7,7 @@
                 <footer><cite>{{yu.author}}</cite></footer>
             </blockquote>
         </div>
-
-    </div> -->
-
-
+    </div>
     <h1>ZEN QUOTES</h1>
 </section>
 <div class="container">
@@ -25,17 +20,8 @@
 
                 <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
 
-
             </div>
-
-
-         
         </div>
-
-
-
-
-
         <div class="col">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
