@@ -1,23 +1,21 @@
-<div class="container2">
-    <h2 class="text-center">Post A Quote</h2>
-    <hr>
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+<div class="container-fluid">
+<h2 class="text-center text-white">New quote:</h2>
+<form (ngSubmit)='submitQuote(); quoteForm.reset()' #quoteForm='ngForm'>
+    <div class="form-group">
+        <label class="text-white" for="Author">Quote Author:</label>
+        <input type="text" class="form-control" id="author" [(ngModel)]='newQuote.name' name="author" #author='ngModel' placeholder="Enter Authors Name Here....">
+      </div>
+    <div class="form-group">
+        <label class="text-white" for="personSubmitted">Submitted by:</label>
+        <input type="text" class="form-control" id="personSubmitted" [(ngModel)]='newQuote.name' name="personSubmitted" #personSubmitted='ngModel' placeholder="Enter Your Name Here...">
 
-        <div class="form-group">
-            <label for="name" style="font-weight: bold; color: orange">Your Name</label>
-            <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
-            <div [hidden]="name.valid || name.pristine">
-            </div>
-        </div>
-        <div class="form-group">
+    </div>
+    <div class="form-group">
+        <label class="text-white" for="quote">Quote:</label>
+        <textarea class="form-control" id="quote" [(ngModel)]='newQuote.description' name="name" name='description' required rows="5" placeholder="Type Quote Here.."></textarea>
+      </div>
 
-            <label for="description" style="font-weight: bold; color: orange">Quote</label>
-            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
-            <div [hidden]="description.valid || description.pristine" >
-            </div>
-        </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action" style="background-color: orange">Submit
-          <i class="material-icons right">send</i>
-        </button>
-      </form>
+    <button type="submit" class="btn btn-primary">Submit Quote</button>
+</form>
 </div>
+

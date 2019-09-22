@@ -1,31 +1,18 @@
-<section id="quotes">
-    <div class="container">
 
-        <div class="row">
-            <blockquote class="text-center text-lg">
-                <p>{{yu.quote}}</p>
-                <footer><cite>{{yu.author}}</cite></footer>
-            </blockquote>
-        </div>
-    </div>
     <h1>ZEN QUOTES</h1>
-</section>
+
 <div class="container">
     <div class="row">
         <div class="col jumbotron">
-
-            <div *ngFor='let quote of quotes;let i = index'>
-                <p appStrikethrough class="me">Added by : {{quote.name}} on {{quote.completeDate|date|uppercase}}</p>
-                <button (click)='toggleDetails(i)' class="btn btn-outline-primary">Read Quote</button>
-
+            <div *ngFor='let quote of quotes;let i = index' class="quoted">
+                <p>Added by : {{quote.name}} on {{quote.completeDate|date|uppercase}}</p>
+                <h4 class="card-title" appHighlightQoute ><button (click)='toggleDetails(i)' class="btn btn-info btn-sm" id="quotes-button" >Read Quote</button></h4>
                 <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
-
             </div>
         </div>
-        <div class="col">
+        <div class="col-sm-6">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-
-
         </div>
-
     </div>
+</div>
+  

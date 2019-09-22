@@ -1,33 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  font-size: 20px;
-  height: 500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url(assets/zen.jpg);
-  background-position-y: 1%;
   opacity: 0.8;
 }
-
-
-#quotes {
-  padding: 20px;
+h1{
   text-align: center;
-
-  color: rgb(255, 4, 4);
-  font-size: 38px;
-  margin-bottom: 2rem;
-  font-family: 'Kaushan Script', cursive;
+  color: blue;
+  font-size: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
-.double {
-  border-style: double;
-  padding-left: 5px;
-  padding-bottom: 5px;
-}
-
-
 #content {
   margin: 0 auto;
   padding-bottom: 50px;
